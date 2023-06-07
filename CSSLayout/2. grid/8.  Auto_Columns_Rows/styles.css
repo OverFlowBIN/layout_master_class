@@ -1,0 +1,34 @@
+/* grid-auto-rows: 100px; */
+/* grid-auto-columns: 100px; */
+/* grid-template-columns 지정된 갯수보다 넘어갈때(이게 우선 있어야된다)
+자동적으로 row, column크기를 지정해 줌
+grid-template-rows는 기본적으로 세팅해도되도 안해도된다(밑으로 데이터가 늘어나는 경우는)
+*/
+
+/* grid-auto-flow는 늘어나는 방향을 row -> column으로 바꿔줌(마치 flex-direction과 같다) */
+
+body {
+  box-sizing: border-box;
+}
+
+.grid {
+  background: gery;
+  color: white;
+  display: grid;
+  gap: 5px;
+
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  /* grid-auto-flow: column; */
+  grid-auto-rows: 100px;
+  grid-auto-columns: 100px;
+}
+/* repeat(갯수, 거리) : CSS의 함수이다 */
+
+.item:nth-child(odd) {
+  background-color: rgb(217, 114, 140);
+}
+
+.item:nth-child(even) {
+  background-color: blueviolet;
+}

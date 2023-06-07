@@ -1,0 +1,44 @@
+/*
+  grid-template
+  grid-template가 grid-template-area랑 다른 부분은 grid-template-columns, grid-template-rows를 미리 정의 할 필요가 없다.
+  grid-template 뒤에다가 해당 template name과 세로 / 가로(맨뒤에만 넣으면됨)를 지정해주면 된다. 
+  해당 teamplate(grid child)에는 grid-area: tamplate_name;을 넣어주면 된다.
+*/
+
+body {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  height: 50vh;
+  /* width: 50vw; */
+  gap: 5px;
+  /* grid-template */
+  grid-template:
+    "header header header" 1fr
+    "content content nav" 2fr
+    "footer footer footer" 1fr
+    / 1fr 1fr 1fr;
+}
+/* repeat(갯수, 거리) : CSS의 함수이다 */
+
+.header {
+  background-color: rgb(217, 114, 140);
+  grid-area: header;
+}
+
+.content {
+  background-color: blueviolet;
+  grid-area: content;
+}
+
+.nav {
+  background-color: burlywood;
+  grid-area: nav;
+}
+
+.footer {
+  background-color: chartreuse;
+  grid-area: footer;
+}

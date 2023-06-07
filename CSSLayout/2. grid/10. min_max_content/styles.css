@@ -1,0 +1,27 @@
+/* max-content, min-content */
+/* min-content : row/column 길이를 content의 최소 크기에 맞춰서 조절
+max-content: row/column 길이를 content의 최대 크기에 맞춰서 조절 */
+
+body {
+  box-sizing: border-box;
+}
+
+.grid {
+  background: gery;
+  color: white;
+  display: grid;
+  gap: 5px;
+
+  grid-template-columns: repeat(auto-fit, minmax(20px, max-content));
+  grid-auto-rows: 100px;
+  margin-bottom: 30px;
+}
+/* repeat(갯수, 거리) : CSS의 함수이다 */
+
+.item:nth-child(odd) {
+  background-color: rgb(217, 114, 140);
+}
+
+.item:nth-child(even) {
+  background-color: blueviolet;
+}

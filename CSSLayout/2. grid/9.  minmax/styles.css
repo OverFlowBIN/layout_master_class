@@ -1,0 +1,26 @@
+/* grid-template-columns: repeat(5, minmax(100px, 1fr)); */
+/* 위와 같이 최소 사이즈와 최대 사이즈를 정할 수 있다 */
+
+body {
+  box-sizing: border-box;
+}
+
+.grid {
+  background: gery;
+  color: white;
+  display: grid;
+  gap: 5px;
+
+  grid-template-columns: repeat(3, minmax(100px, 200px));
+  grid-template-rows: repeat(4, 100px);
+  grid-auto-columns: 100px;
+}
+/* repeat(갯수, 거리) : CSS의 함수이다 */
+
+.item:nth-child(odd) {
+  background-color: rgb(217, 114, 140);
+}
+
+.item:nth-child(even) {
+  background-color: blueviolet;
+}

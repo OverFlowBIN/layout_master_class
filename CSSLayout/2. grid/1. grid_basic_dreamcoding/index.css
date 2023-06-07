@@ -1,0 +1,37 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  /* margin: 0; */
+  font-size: 20px;
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 70px auto 50px;
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+  grid-gap: 10px;
+  /* 또는 gap: 10px; */
+}
+
+header {
+  grid-area: header;
+  background: black;
+  color: white;
+}
+
+main {
+  background: cadetblue;
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+  background: coral;
+}
+
+footer {
+  grid-area: footer;
+  background: black;
+}

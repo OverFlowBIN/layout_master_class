@@ -1,0 +1,56 @@
+/* align-self, order, flex-wrap, align-content */
+/* flex-flow: column wrap === flex-direction: column; + flex-wrap: wrap; (driection속성 wrap속성 두개를 동시에 띄어쓰기 기준으로 쓸 수 있다. 하지만 추천 코드 아님.)*/
+
+.father {
+  display: flex;
+  /* flex-direction: column; */
+  /* flex-direction: row-reverse; */
+  justify-content: space-around;
+  align-items: center;
+  /* align-content은 flex-wrap에 의해 띄어진 요소들의 line을 변경한다. */
+  /* align-content의 기본값은 apace-around */
+  align-content: center;
+
+  height: 200vh;
+  /* width: 300px; */
+
+  /* flex-wrap의 기본값은 nowrap이다 => 한줄에 다 넣음 */
+  /* wrap으로 바꾸면 child의 width를 유지함 */
+  /* flex-direction이 reverse면 줄을 기준으로 reverse 시켜준다 */
+  /* 줄과 관계 없이 전체를 reverse 시켜주기 위해선 flex-wrap: wrap-reverse;를 해야한다 */
+  flex-wrap: wrap-reverse;
+}
+
+/* flex는 하위 요소의 width를 신경쓰지 않는다. 무조건 한줄에 넣는것을 우선시함 */
+.child {
+  width: 200px;
+  height: 200px;
+  background: peru;
+  font-size: 50px;
+  color: white;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+/* flex 관련 사항을 상위 클래스에서 해주는것이 아니라 자체 하나만 변경하고 싶을때 align-self, align-order를 사용 */
+/* 상위 클래스의 height가 없으면 작동하지 않는다 */
+/* .child:nth-child(2) {
+  align-self: center;
+}
+
+.child:nth-child(3) {
+  align-self: flex-end;
+}
+
+html을 수정할 수 없을때 CSS만으로 html element 순서를 바꾸는 방법
+.child:nth-child(1) {
+  기본적으로 order는 처음에는 모두 0이다. => 모두 같은 order면 html순으로
+  추가적으로 모두가 0일때 어떤 요소를 -1로 하면 맨앞에 둘 수 있다.
+  order: 2;
+}
+.child:nth-child(2) {
+  기본적으로 order는 0이다.
+  order: 3;
+}
+=> 3는 order: 0, 1은 order:2, 2는 order3 */

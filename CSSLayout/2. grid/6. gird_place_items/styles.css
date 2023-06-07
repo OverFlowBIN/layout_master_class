@@ -1,0 +1,44 @@
+/*
+  grid_place_items
+  - justify-items : grid는 기본적으로 2차원 형상을 기본으로 하고있다 main axios가 horizon이기 때문에 justify-items를 사용하면 grid child 안에서의 채우는 정도를 조절할 수 있다.
+  - align-items : 2차원 형식 => main axios => horizon => align-items => cross axios 조절
+*/
+
+body {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  gap: 5px;
+  height: 50vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  /* justify-items: stretch; stretch가 기본값이다. */
+  /* 하지만 child의 크기가 지정이 된다면 지정된 값이 우선적으로 적용된다(end, center, start등은 가능하다) */
+  /* 
+  justify-items: center;
+  align-items: center; 
+  */
+
+  /* justify-items, align-items를 한번에 쓸 수 있는 방법 */
+  /* place-items: y-dir x-dir;(x-dir, y-dir이 같은 값이면 하나만 써도 된다) */
+  place-items: stretch center;
+}
+/* repeat(갯수, 거리) : CSS의 함수이다 */
+
+.header {
+  background-color: rgb(217, 114, 140);
+}
+
+.content {
+  background-color: blueviolet;
+}
+
+.nav {
+  background-color: burlywood;
+}
+
+.footer {
+  background-color: chartreuse;
+}

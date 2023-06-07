@@ -1,0 +1,25 @@
+body {
+  box-sizing: border-box;
+}
+/* 
+content-box : 콘텐트 영역을 기준으로 크기를 정한다.
+border-box : 테두리를 기준으로 크기를 정한다.
+initial : 기본값으로 설정한다(content-box)
+inherit : 부모 요소의 속성값을 상속받는다. 
+*/
+
+.father {
+  display: grid;
+  grid-template-columns: 250px 250px 250px;
+  /* grid-template-rows: 100px 50px 300px; */
+  gap: 10px;
+}
+
+.child {
+  background: peru;
+  color: white;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

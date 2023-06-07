@@ -1,0 +1,26 @@
+body {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto 200px;
+  grid-template-rows: 100px repeat(2, 200px) 100px;
+}
+/* repeat(갯수, 거리) : CSS의 함수이다 */
+
+.header {
+  background-color: rgb(217, 114, 140);
+}
+
+.content {
+  background-color: blueviolet;
+}
+
+.nav {
+  background-color: burlywood;
+}
+
+.footer {
+  background-color: chartreuse;
+}

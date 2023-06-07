@@ -1,0 +1,36 @@
+/* justify-content, align-content */
+/* - space-around, space-between, start, end, center, ... */
+/* - Grid 전체의 위치를 잡아준다. */
+
+body {
+  box-sizing: border-box;
+}
+
+.grid {
+  background: gery;
+  color: white;
+  display: grid;
+  gap: 5px;
+  height: 150vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  justify-content: center;
+  align-content: center;
+}
+/* repeat(갯수, 거리) : CSS의 함수이다 */
+
+.header {
+  background-color: rgb(217, 114, 140);
+}
+
+.content {
+  background-color: blueviolet;
+}
+
+.nav {
+  background-color: burlywood;
+}
+
+.footer {
+  background-color: chartreuse;
+}
